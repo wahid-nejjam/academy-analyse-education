@@ -1,0 +1,27 @@
+[project]
+name = "academy-analyse-education"
+version = "1.0.0"
+description = "Analyse exploratoire EdStats pour l'expansion internationale d'academy"
+requires-python = ">=3.12,<3.13"
+authors = [{ name = "Wahid Nejjam" }]
+# Versions de l'environnement dans lequel le notebook a été exécuté.
+# Les modules standard (pathlib, gc, textwrap, sys, importlib) sont inclus avec Python.
+dependencies = [
+    "pandas==2.3.3",
+    "numpy==2.5.4",
+    "matplotlib==3.11.2",
+    "seaborn==0.13.2",
+    "scipy==1.18.1",
+    "ipython==9.17.1",
+    "jupyterlab==4.6.4",
+    "ipykernel==7.4.0",
+]
+
+[tool.uv]
+package = false
+
+# Utilisation depuis le dossier contenant le notebook et les cinq CSV :
+# uv sync
+# uv run jupyter lab
+# Redémarrer le noyau, puis exécuter toutes les cellules dans l'ordre.
+# Conserver le fichier uv.lock généré pour figer aussi les dépendances transitives.
